@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Fitness Website</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: rgba(244, 244, 244, 1);
+            color: rgba(51, 51, 51, 1);
+            animation: fadeIn 1.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(90deg, rgba(40, 53, 147, 1) 0%, rgba(0, 123, 255, 1) 100%);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation Menu Styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+            transition: transform 0.3s;
+        }
+
+        nav ul li:hover {
+            transform: scale(1.1);
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Intro Section */
+        .intro {
+            padding: 40px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 1);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s forwards;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Section Styles */
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: rgba(40, 53, 147, 1);
+        }
+
+        h3 {
+            color: rgba(0, 123, 255, 1);
+            margin-bottom: 10px;
+        }
+
+        /* Image Styles */
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Button Styles */
+        button {
+            background-color: rgba(0, 123, 255, 1);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: rgba(0, 105, 217, 1);
+            transform: scale(1.05);
+        }
+
+        /* Contact Form Styling */
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus, 
+        .contact-form textarea:focus {
+            border-color: rgba(0, 123, 255, 1);
+            outline: none;
+        }
+
+        .contact-form button {
+            width: 100%;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .intro {
+                padding: 20px;
+            }
+
+            header {
+                padding: 10px 0;
+            }
+
+            h2, h3 {
+                font-size: 1.5em;
+            }
+        }
+
+        /* Additional Styles for Sections */
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInSection 1s forwards;
+        }
+
+        @keyframes fadeInSection {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(40, 53, 147, 1);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Gym</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="intro">
+        <h1>Get Fit, Stay Healthy!</h1>
+        <p>Your fitness journey starts here. Whether you're a beginner or an experienced athlete, our gym has everything you need to achieve your goals.</p>
+        <p>Join us today and discover the perfect environment to motivate you towards a healthier lifestyle.</p>
+        <button>Join Now</button>
+    </div>
+
+    <section id="about" style="background-color: #fff;">
+        <h2>About Us</h2>
+        <p>Welcome to <strong>[Gym Name]</strong>, your premier destination for fitness and wellness. Our state-of-the-art facility is equipped with the latest fitness equipment, group classes, and personal training services to help you achieve your fitness goals.</p>
+        <p>Our mission is to inspire and empower individuals to lead healthier, happier lives while fostering a culture of inclusivity and personal growth.</p>
+        <p>We believe that fitness should be accessible to everyone, which is why we offer a variety of membership options tailored to meet your needs.</p>
+        <p>Our experienced and certified trainers are here to guide you, offering support and motivation every step of the way.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <article>
+            <h3>Personal Training</h3>
+            <p>One-on-one sessions with certified trainers to personalize your workouts and achieve your fitness goals effectively.</p>
+            <p>Our trainers develop customized workout plans based on individual needs and preferences, ensuring that you stay motivated and engaged.</p>
+        </article>
+        <article>
+            <h3>Group Classes</h3>
+            <p>Join our diverse group classes, including Zumba, Yoga, and HIIT, designed for all fitness levels.</p>
+            <p>Experience the energy and camaraderie of working out with a community of like-minded individuals.</p>
+        </article>
+        <article>
+            <h3>Nutrition Coaching</h3>
+            <p>Get expert advice on nutrition tailored to your specific fitness goals, helping you make informed dietary choices.</p>
+            <p>Our nutritionists help you create meal plans that complement your training, enhancing your results.</p>
+        </article>
+        <article>
+            <h3>Facilities</h3>
+            <p>Our gym features cutting-edge equipment, spacious workout areas, and facilities designed to provide you with a comfortable and motivating environment.</p>
+            <p>From cardio machines to strength training equipment, we have everything you need for a successful workout.</p>
+        </article>
+    </section>
+
+    <section id="classes">
+        <h2>Upcoming Classes</h2>
+        <p>Check out our exciting classes designed to keep you moving and engaged:</p>
+        <ul>
+            <li><strong>Monday:</strong> Zumba - 6 PM</li>
+            <li><strong>Tuesday:</strong> Yoga - 5 PM</li>
+            <li><strong>Wednesday:</strong> HIIT - 7 PM</li>
+            <li><strong>Thursday:</strong> Spin Class - 6 PM</li>
+            <li><strong>Friday:</strong> Pilates - 7 PM</li>
+            <li><strong>Saturday:</strong> Body Pump - 10 AM</li>
+        </ul>
+        <p>These classes are designed for different skill levels—you are welcome to join regardless of your experience!</p>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <p>"Joining this gym has transformed my life! The community support and workout plans have made a significant difference in my fitness journey." - Sarah M.</p>
+        <p>"I love the personalized training sessions! I've made so much progress and feel stronger and healthier than ever." - David R.</p>
+        <p>"The group classes are so much fun, and I truly enjoy the motivation from other members and instructors." - Mark T.</p>
+        <p>"The facilities are top-notch, and the staff is incredibly supportive and helpful." - Emily L.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <h3>Gym Location</h3>
+            <p>123 Fitness Street</p>
+            <p>Wellness City, WC 45678</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: <a href="mailto:info@gymexample.com" style="color: rgba(0, 123, 255, 1);">info@gymexample.com</a></p>
+        </div>
+        
+        <div class="contact-form">
+            <h3>Get in Touch</h3>
+            <form action="your_form_processing_url" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Gym Fitness. All Rights Reserved.</p>
+        <p>Follow us on social media:</p>
+        <p>
+            <a href="#" style="color: rgba(255, 255, 255, 0.8);">Facebook</a> | 
+            <a href="#" style="color: rgba(255, 255, 255, 0.8);">Instagram</a> | 
+            <a href="#" style="color: rgba(255, 255, 255, 0.8);">Twitter</a>
+        </p>
+    </footer>
+
+</body>
+</html>
